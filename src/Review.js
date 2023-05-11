@@ -8,6 +8,21 @@ const Review = () => {
   // console.log(people)
   const {name, job, image, text} = people[index]
 
+  const prevPerson = () => {
+      setIndex((index) => {
+        let newIndex = index - 1;
+        return newIndex;
+      });
+  };
+
+
+  const nextPerson = () => {
+    setIndex((index) => {
+      let newIndex = index + 1;
+      return newIndex;
+    });
+};
+
   return (
     <article className="review">
       <div className="image-container">
