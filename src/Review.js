@@ -8,7 +8,12 @@ const Review = () => {
   // console.log(people)
   const {name, job, image, text} = people[index]
 
-  return (<h2>review component</h2>
+  return (
+    <article className="review">
+      <div className="image-container">
+      <img src={image} alt="{name}" className="person-img"></img>
+      </div>
+    </article>
 
   )
 };
