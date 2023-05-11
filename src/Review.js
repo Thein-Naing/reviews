@@ -8,18 +8,27 @@ const Review = () => {
   // console.log(people)
   const {name, job, image, text} = people[index]
 
+  const checkNumber = (n) => { // to arrange for person limit
+    if (n > people.length -1) {
+      return 0;
+    }
+    if (n < 0 ) {
+      return people.length -1;
+  }
+  return n;
+}
+
   const prevPerson = () => {
       setIndex((index) => {
         let newIndex = index - 1;
-        return newIndex;
+        return checkNumber(newIndex);
       });
   };
-
 
   const nextPerson = () => {
     setIndex((index) => {
       let newIndex = index + 1;
-      return newIndex;
+      return checkNumber(newIndex);
     });
 };
 
