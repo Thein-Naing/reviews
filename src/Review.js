@@ -32,6 +32,9 @@ const Review = () => {
     });
 };
 
+  const randomPerson = () => {
+    console.log(Math.random());
+  }
   return (
     <article className="review">
       <div className="image-container">
@@ -51,8 +54,9 @@ const Review = () => {
           <FaChevronRight />
         </button>
         </div>
-        <button className='random-btn'>
-          suprise me
+        <button className='random-btn'
+        onClick={randomPerson}>
+          surprise me
         </button>
 
 
