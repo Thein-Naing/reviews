@@ -33,7 +33,11 @@ const Review = () => {
 };
 
   const randomPerson = () => {
-    console.log(Math.random());
+   let randomNumber = Math.floor (Math.random() * people.length);
+   if ( randomNumber === index ) {
+    randomNumber = index + 1
+   }
+   setIndex(randomNumber(checkNumber));
   }
   return (
     <article className="review">
@@ -58,9 +62,6 @@ const Review = () => {
         onClick={randomPerson}>
           surprise me
         </button>
-
-
-
     </article>
 
   )
