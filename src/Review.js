@@ -12,6 +12,9 @@ const Review = () => {
     <article className="review">
       <div className="image-container">
       <img src={image} alt="{name}" className="person-img"></img>
+      <span className="quote-icon">
+        <FaQuoteRight />
+      </span>
       </div>
     </article>
 
